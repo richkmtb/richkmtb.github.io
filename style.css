@@ -1,0 +1,67 @@
+body, html {
+    height: 100%;
+}
+
+.bg {
+	background-image: url(background-image2.jpg);
+	height: 100%;
+	width: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	text-align: center;
+	padding-top: 25vh;
+}
+
+h2,h1 {
+	color: white;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h1 {
+	font-size: 80px;
+}
+
+i {
+	font-size: 10rem;
+	color: white;
+	transition: all 2s;
+}
+
+i:hover {
+	color: rgba(0, 0, 0, .7);
+	transition: all 1s;
+}
+
+.button {
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 20px;
+	transition: all 2s;
+
+}
+
+.button:hover {
+	transform: scale(1);
+	transition: 1s ease-out;
+}
+
+.btn-primary {
+	background-color: rgb(10.6, 7.5, 20.4);
+	border-color: rgb(0, 7.5, 20.4);
+	padding: 30px;
+	border-radius: 50%;
+	font-weight: bold;
+	transition: all 2s;
+}
+
+.btn-primary:hover {
+	background-color: rgba(10.6, 7.5, 20.4, .4);
+	border-color: rgb(10.6, 7.5, 20.4);
+}
