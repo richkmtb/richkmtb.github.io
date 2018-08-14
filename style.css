@@ -33,10 +33,6 @@ body {
 	margin-left: 2%;
 }
 
-.done {
-	text-decoration: line-through;
-}
-
 input {
 	border: 5px solid #F1F1F1;	
 	padding: 1% 2%;
@@ -58,7 +54,7 @@ li {
 	font-weight: bold;
 	font-size: 2em;
 }
-
+/*button*/
 .animate
 {
 	transition: all 0.1s;
@@ -93,4 +89,14 @@ li {
 	transform: translate(0px,5px);
   -webkit-transform: translate(0px,1px);
 	border-bottom: 0px solid;
+}
+/*button end*/
+
+.listItem {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.done {
+	text-decoration: line-through;
 }
