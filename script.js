@@ -14,9 +14,19 @@ function createListElement() {
 	ul.appendChild(li);
 	input.value = "";
 
-
+	//references css style for line through
 	function markListItem() {
 		li.classList.toggle("done");
+	}
+	// creates button
+	var btnDel = document.createElement("button");
+	btnDel.classList.add("deleteBtn");
+	btnDel.appendChild(document.createTextNode("REMOVE"));
+	li.appendChild(btnDel);
+	btnDel.addEventListener("click", deleteListItem);
+
+	function deleteListItem() {
+		li.classList.add("delete");
 	}
 }
 
