@@ -1,5 +1,6 @@
 body {
 	background-color: rgb(255, 156, 13);
+
 }
 
 .wrapper {
@@ -122,4 +123,35 @@ li {
 
 .delete {
 	display: none;
+}
+
+/*footer*/
+#footerIcons {
+  font-size: 28px;
+  color: rgb(200,10,10);
+}
+
+#footerIcons a {
+  color: rgba(200,10,10,0.5);
+  transition: all .8s ease-out;
+}
+
+#footerIcons a:hover {
+  color: rgba(10,10,10,1);
+}
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color:;
+  text-align: center;
+}
+
+.footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
