@@ -1,49 +1,54 @@
 body {
-	background-color: rgb(255, 156, 13);
+  background-color: rgb(255, 156, 13);
 
 }
 
 .wrapper {
-	background-color: white;
-	align-content: center;
-	height: 100%;
-	padding: 40px;
-	padding-bottom: 18em;
-	margin: 20px 40px;
-	text-align: left;
-	color: rgb(231, 22, 18);
-	border-radius: 0 50px;
+  background-color: white;
+  align-content: center;
+  height: 100%;
+  padding: 40px;
+  padding-bottom: 18em;
+  margin: 20px 40px;
+  text-align: left;
+  color: rgb(231, 22, 18);
+  border-radius: 0 50px;
+  min-width: 300px;
 }
 
 #myTit {
-	font-size: 3em;
-	margin: 10px;
-	padding: ;
-	color: rgb(146, 16, 0);
-	text-decoration: underline;
-	font-family: 'Bungee Shade', cursive;
+  font-size: 3rem;
+  margin: 10px;
+  padding: ;
+  color: rgb(146, 16, 0);
+  text-decoration: underline;
+  font-family: 'Bungee Shade', cursive;
 }
 
 #myList {
-	margin-left: 2%;
-	text-align: left;
-	font-family: 'Bungee', cursive;
+  margin-left: 2%;
+  text-align: left;
+  font-family: 'Bungee', cursive;
 }
 
 .theList {
-	margin-left: 2%;
-	font-family: 'Courgette', cursive;
-	font-weight: bold;
-	color: rgb(19, 19, 19);
+  margin-left: 2%;
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+  color: rgb(19, 19, 19);
+}
+
+.theList ul {
+  margin-top: 30px;
 }
 
 input {
-	border: 5px solid #F1F1F1;	
-	padding: 1% 2%;
-	border-radius: 0 20px;
-	width: 65%;
-	height: 20%;
-	font-size: 1em;
+  border: 5px solid #F1F1F1;  
+  padding: 1% 2%;
+  border-radius: 0 20px;
+  width: 65%;
+  height: 20%;
+  font-size: 1em;
 }
 
 input:focus {
@@ -51,30 +56,30 @@ input:focus {
 }
 
 ul {
-	list-style-type: circle;
+  list-style-type: circle;
 }
 
 li {
-	font-weight: bold;
-	font-size: 2em;
+  font-weight: bold;
+  font-size: 2em;
 }
 /*button*/
 .animate
 {
-	transition: all 0.1s;
-	-webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
 }
 
 .action-button
 {
-	position: absolute;
-	padding: 10px 40px;
-  	margin: 0px 10px 10px 0px;
-	border-radius: 0 20px;
-	font-family: 'Bungee', cursive;
-	font-size: 18px;
-	color: #FFF;
-	text-decoration: none;	
+  position: absolute;
+  padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+  border-radius: 0 20px;
+  font-family: 'Bungee', cursive;
+  font-size: 18px;
+  color: #FFF;
+  text-decoration: none;  
 }
 
 .action-button:focus {
@@ -83,26 +88,26 @@ li {
 
 .yellow
 {
-	background-color: rgb(231, 22, 18);
-	border-bottom: 5px solid rgb(231, 100, 18);
-	text-shadow: 0px -2px rgb(231, 22, 118);
+  background-color: rgb(231, 22, 18);
+  border-bottom: 5px solid rgb(231, 100, 18);
+  text-shadow: 0px -2px rgb(231, 22, 118);
 }
 
 .action-button:active
 {
-	transform: translate(0px,5px);
+  transform: translate(0px,5px);
   -webkit-transform: translate(0px,1px);
-	border-bottom: 0px solid;
+  border-bottom: 0px solid;
 }
 /*button end*/
 
 .listItem {
-	cursor: pointer;
-	font-weight: bold;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .done {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .deleteBtn {
@@ -122,7 +127,7 @@ li {
 }
 
 .delete {
-	display: none;
+  display: none;
 }
 
 /*footer*/

@@ -1,3 +1,4 @@
+//create variables to cache elements youll be using
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
@@ -18,13 +19,13 @@ function createListElement() {
 	function markListItem() {
 		li.classList.toggle("done");
 	}
-	// creates button
+	// creates delete button
 	var btnDel = document.createElement("button");
 	btnDel.classList.add("deleteBtn");
 	btnDel.appendChild(document.createTextNode("REMOVE"));
 	li.appendChild(btnDel);
 	btnDel.addEventListener("click", deleteListItem);
-
+	//reference style for del button
 	function deleteListItem() {
 		li.classList.add("delete");
 	}
