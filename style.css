@@ -24,3 +24,33 @@ h3 {
     text-transform: none;
     letter-spacing: 0.01em;
 }
+
+input{
+    background-color: rgba(0,0,0,.1);
+    border: 2px solid rgba(0,0,0,.1);
+    border-radius: .4em;
+}
+
+input:hover {
+    background-color: rgba(255,255,255,.4);
+    border: 2px solid #FFF;
+}
+
+button {    
+    background-color: rgba(0,0,0,0);
+    border: 2px solid #FFF;
+    border-radius: .8em;    
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: .7em 1em .5em;
+    position: relative;
+    top: -2.5px;
+}
+
+button:hover {
+    background-color: rgba(255,255,255,.5);
+    color: rgba(0,0,0,.5);
+    font-weight: bold;
+}
