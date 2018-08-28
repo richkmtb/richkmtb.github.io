@@ -29,6 +29,7 @@ input{
     background-color: rgba(0,0,0,.1);
     border: 2px solid rgba(0,0,0,.1);
     border-radius: .4em;
+    outline: none;
 }
 
 input:hover {
@@ -47,6 +48,7 @@ button {
     padding: .7em 1em .5em;
     position: relative;
     top: -2.5px;
+    outline: none;
 }
 
 button:hover {
