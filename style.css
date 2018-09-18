@@ -1,58 +1,123 @@
+html {
+background: repeating-linear-gradient(
+	  to right,
+	  #f6ba52,
+	  #f6ba52 10px,
+	  #ffd180 10px,
+	  #ffd180 20px
+	);
+}
+
 body {
-	font: 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5em;
-    top: 15%;
-	background: linear-gradient(to right, linen , yellow); /* Standard syntax */
+	font-family: 'Roboto', sans-serif;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.calc-btn {
+	background-color: silver;
+	font: black;
+	width: 25px;
+	height: 45px;
+	border: 1px solid grey;
+	text-align: center;
+	cursor: pointer;
+	font-size: 32px;
+	font-weight: 100;
+	padding-top: 3px;
+}
+
+.calc-btn:hover {
+	background-color: orange;
+}
+
+.row {
+	display: table;
+	table-layout: fixed;
+	width: 200px;
+}
+
+.column {
+	display: table-cell;
+}
+
+#calc-zero {
+	width: 52px;
+	border-radius: 0 0 0 7px;
+}
+
+#calc-clear {
+	width: 52px;
+}
+
+#calc-display-val {
+	height: 60px;
+	color: white;
+	text-align: right;
+	border-left: 1px solid grey;
+	border-top: 1px solid grey;
+	border-right: 1px solid grey;
+	font-size: 48px;
+	background-color: #383838;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 12px;
+	border-radius: 7px 7px 0 0;
+
+}
+
+.calc-btn-operator {
+	background-color: orange;
+	font: white;
+
 }
 
 h1 {
-    font: 600 3.5em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5em;
-    width: 100%;
+	text-align: center;
+	margin-top: 50px;
 }
 
-h3 {
-	font: 900 1em 'Raleway', sans-serif;
-    color: rgba(0,0,0,.5);
-    text-align: center;
-    text-transform: none;
-    letter-spacing: 0.01em;
+#calc-equals {
+	border-radius: 0 0 7px 0;
 }
 
-input{
-    background-color: rgba(0,0,0,.1);
-    border: 2px solid rgba(0,0,0,.1);
-    border-radius: .4em;
-    outline: none;
+#calc-parent {
+	margin-left: calc(50% - 100px);
 }
 
-input:hover {
-    background-color: rgba(255,255,255,.4);
-    border: 2px solid #FFF;
+/*footer*/
+#footerIcons {
+  font-size: 28px;
+  color: rgb(200,10,10);
 }
 
-button {    
-    background-color: rgba(0,0,0,0);
-    border: 2px solid #FFF;
-    border-radius: .8em;    
-    color: #FFF;
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    padding: .7em 1em .5em;
-    position: relative;
-    top: -2.5px;
-    outline: none;
+#footerIcons a {
+  color: rgba(200,10,10,0.5);
+  transition: all .8s ease-out;
 }
 
-button:hover {
-    background-color: rgba(255,255,255,.5);
-    color: rgba(0,0,0,.5);
-    font-weight: bold;
+#footerIcons a:hover {
+  color: rgba(10,10,10,1);
+}
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color:;
+  text-align: center;
+}
+
+.footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }

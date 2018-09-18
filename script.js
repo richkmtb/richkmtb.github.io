@@ -1,68 +1,116 @@
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-var button = document.querySelector("button");
+const oneBtn = document.getElementById("calc-one");
+const twoBtn = document.getElementById("calc-two");
+const threeBtn = document.getElementById("calc-three");
+const fourBtn = document.getElementById("calc-four");
+const fiveBtn = document.getElementById("calc-five");
+const sixBtn = document.getElementById("calc-six");
+const sevenBtn = document.getElementById("calc-seven");
+const eightBtn = document.getElementById("calc-eight");
+const nineBtn = document.getElementById("calc-nine");
+const zeroBtn = document.getElementById("calc-zero");
 
-setGradient();
+const decimalBtn = document.getElementById("calc-decimal");
+const clearBtn = document.getElementById("calc-clear");
+const backspaceBtn = document.getElementById("calc-backspace");
+const displayValElement = document.getElementById("calc-display-val");
 
-function setGradient() {
-		body.style.background = 
-		"linear-gradient(to right, " 
-		+ color1.value 
-		+ ", " 
-		+ color2.value 
-		+ ")";
+var displayVal = "0";
+var pendingVal;
+var evalStringArray = [];
 
-		css.textContent = body.style.background + ";";
+const calcNumBtns = document.getElementsByClassName("calc-btn-num");
+const calcOperatorBtns = document.getElementsByClassName("calc-btn-operator");
+
+const updateDisplayVal = (clickObj) => {
+	const btnText = clickObj.target.innerText;
+
+	if(displayVal === "0") 
+		displayVal = "";
+
+	displayVal += btnText;
+	displayValElement.innerText = displayVal;
 }
 
-color1.addEventListener("input", setGradient);
-color2.addEventListener("input", setGradient);
-button.addEventListener("click", setGradientRandom);
+const performOperation = (clickObj) => {
+	let operator = clickObj.target.innerText;
 
-function setGradientRandom() {
-	var r1 = randomNumberRGB();
-	var g1 = randomNumberRGB();
-	var b1 = randomNumberRGB();
-	var r2 = randomNumberRGB();
-	var g2 = randomNumberRGB();
-	var b2 = randomNumberRGB();
+	switch (operator) {
+		case '+':
+			pendingVal = displayVal;
+			displayVal = "0";
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("+");
+			break;
 
-		body.style.background = 
-		"linear-gradient(to right, " 
-		+ randomNumberRGBfull(r1,g1,b1) 
-		+ ", " 
-		+ randomNumberRGBfull(r2,g2,b2) 
-		+ ")";
+		case '-':
+			pendingVal = displayVal;
+			displayVal = "0";
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("-");
+			break;
 
-	css.textContent = body.style.background + ";";
+		case 'x':
+			pendingVal = displayVal;
+			displayVal = "0";
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("*");
+			break;
 
-	color1.value = rgbToHex(r1, g1, b1);
-	color2.value = rgbToHex(r2, g2, b2);
+		case '÷':
+			pendingVal = displayVal;
+			displayVal = "0";
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("/");
+			break;
+
+		case '=':
+			evalStringArray.push(displayVal);
+			let evaluation = eval(evalStringArray.join(' '));
+			displayVal = evaluation + ' ';
+			displayValElement.innerText = displayVal;
+			evalStringArray = [];
+			break;
+
+		default:
+			break;
+	}
 }
 
-function randomNumber(min, max) {
-	var result = Math.floor(Math.random() * (max - min + 1)) + min;
-	return result;
+for(let i = 0;i < calcNumBtns.length; i++) {
+	calcNumBtns[i].addEventListener("click", updateDisplayVal, false);
 }
 
-function randomNumberRGB() {
-	return randomNumber(0, 255);
+
+for(let i = 0;i < calcOperatorBtns.length; i++) {
+	calcOperatorBtns[i].addEventListener("click", performOperation, false);
 }
 
-function randomNumberRGBfull(r, g, b) {
-	return 'rgb(' + r + ',' + g + ',' + b + ')';
+
+
+const backSpaceFunc = () => {
+	let lengthOfDisplayVal = displayVal.length;
+	displayVal = displayVal.slice(0, lengthOfDisplayVal - 1);
+	if(displayVal === '')
+		displayVal = "0";
+	displayValElement.innerText = displayVal;
+
+}
+const clearBtnFunc = () => {
+	displayVal = "0";
+	pendingVal = undefined;
+	evalStringArray = [];
+	displayValElement.innerHTML = displayVal;
+}
+const decimalBtnFunc = () => {
+	if(!displayVal.includes('.'))
+		displayVal += '.';
+	displayValElement.innerText = displayVal;
 }
 
-// Functions componentToHex and rgbToHex -->
-// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb 
-
-function componentToHex(c) {
-    var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-}
-
-function rgbToHex(r, g, b) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-}
+clearBtn.addEventListener("click", clearBtnFunc);
+backspaceBtn.addEventListener("click", backSpaceFunc);
+decimalBtn.addEventListener("click", decimalBtnFunc);

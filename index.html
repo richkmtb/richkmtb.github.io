@@ -1,16 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Background Gradients</title>
+	<title>Calculator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body id="gradient">
-	<h1> Background Generator</h1>
-	<input class="color1" type="color" name="color1" value="#00ff00">
-	<input class="color2" type="color" name="color2" value="#ff0000">
-	<button> Random </button>
-	<h2>Current CSS Background</h2>
-	<h3></h3>
+<body>
+	<h1>Rich Ks<br>Calculator</h1>
+	<div id="calc-parent">
+		<div class="row">
+			<div class="column" id="calc-display-val">0</div>
+		</div>
+		<div class="row">
+			<div class="calc-btn column" id="calc-clear">AC</div>
+			<div class="calc-btn column" id="calc-backspace">&#8676;</div>
+			<div class="calc-btn calc-btn-operator column" id="calc-divide">÷</div>
+		</div>
+		<div class="row">
+			<div class="calc-btn calc-btn-num column" id="calc-seven">7</div>
+			<div class="calc-btn calc-btn-num column" id="calc-eight">8</div>
+			<div class="calc-btn calc-btn-num column" id="calc-nine">9</div>
+			<div class="calc-btn calc-btn-operator column" id="calc-multiply">x</div>
+		</div>
+		<div class="row">
+			<div class="calc-btn calc-btn-num column" id="calc-four">4</div>
+			<div class="calc-btn calc-btn-num column" id="calc-five">5</div>
+			<div class="calc-btn calc-btn-num column" id="calc-six">6</div>
+			<div class="calc-btn calc-btn-operator column" id="calc-minus">-</div>
+		</div>
+		<div class="row">
+			<div class="calc-btn calc-btn-num column" id="calc-one">1</div>
+			<div class="calc-btn calc-btn-num column" id="calc-two">2</div>
+			<div class="calc-btn calc-btn-num column" id="calc-three">3</div>
+			<div class="calc-btn calc-btn-operator column" id="calc-plus">+</div>
+		</div>
+		<div class="row">
+			<div class="calc-btn calc-btn-num column" id="calc-zero">0</div>
+			<div class="calc-btn column" id="calc-decimal">.</div>
+			<div class="calc-btn calc-btn-operator column" id="calc-equals">=</div>
+		</div>
+
+
+	</div>
+
+
+<footer class="footer">
+	<div class="container h-100">
+		<div class="rowFooter h-100 justify-content-center align-items-center">
+			<div class="col-12">
+				<div id="footerIcons">
+			        <!-- social navigaion links -->
+			    	<a href="https://www.facebook.com/r.i.c.h.kk" title="Like me on Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
+
+			    	<a href="https://twitter.com" title="Follow me on Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a>
+
+			    	<a href="https://www.instagram.com/richk_official/" title="Follow me on Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+
+			    	<a href="" title="Contact me via Skype" target="_blank"><i class="fa fa-skype skypeIcon"></i></a>
+
+			    	<a href="mailto:richkmtb@hotmail.com" title="Contact me via Email" target="_blank"><i class="fa fa-envelope-square"></i></a>
+		    	</div>
+				<p> Richard Kiernan &copy; 2018<br>
+				</p>       
+			</div>
+		</div>
+	</div>
+</footer>
+
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
